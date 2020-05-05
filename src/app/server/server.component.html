@@ -1,0 +1,12 @@
+<div><h1>My first app</h1>
+    <label>Servername : </label>
+    <input type="text" [(ngModel)]="servername">
+    <p *ngIf="serverCreated; else noServer">Server is created!! server name is {{servername}}</p>
+    <ng-template #noServer >
+        <p>No server created</p>
+    </ng-template >
+    </div><br>
+    <div>
+    <button (click)="onCreateServer()" [disabled]="servername===''">Add Server</button> <br><br>
+    <button (click)="reset() " [disabled]="servername === '' ">Reset</button>
+    </div>

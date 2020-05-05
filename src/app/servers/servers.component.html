@@ -1,0 +1,11 @@
+<!-- <p [ngStyle]="{backgroundColor:getColor()}">{{servername}} with id {{id}}  is {{serverStatus}}</p> -->
+<label>Server Name: </label>
+<input type="text" [(ngModel)]="servername">
+<button [disabled]="serverCreated" (click)="onCreateServer()">Add Server</button>
+{{servername}}
+{{servercreationStatus}}
+<p 
+[ngStyle]="{backgroundColor:getColor()}" 
+[ngClass]="{online: serverStatus==='online'}">
+{{servername}} with id {{id}}  is {{serverStatus}}
+</p>
